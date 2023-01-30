@@ -42,4 +42,19 @@ class Popup {
 
     }
 
+    setContent(content, id) {
+        // const cardImage = content.querySelector('.card__image').src;
+        // const cardLink = content.querySelector('.card__link').textContent;
+        // const elements = [...document.querySelector('#popup-form-edit').elements];
+        // elements.forEach((input) => {
+        //     if(input.name === 'id') {
+        //         input.value = id;
+        //         return (input.disabled = true);
+        //     }
+        //     if (input.type !== 'checkbox') input.value = '222';
+        //     if (input.type === 'checkbox') input.checked = true; 
+        // });
+        // this.data = content;
+    }
+
 }

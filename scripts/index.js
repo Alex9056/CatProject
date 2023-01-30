@@ -65,13 +65,18 @@ function handleFormAddNewCat(event, isEdit) {
 };
 const formEditCat = document.querySelector('#popup-form-edit');
 
-function onclickToEdit(card, id) {
-    console.log({ card, id })//проверяем,что врно приходят данные
-}
+
 
 // formAddCat.addEventListener('submit', ()=> {popupForNewCat.close()}); Форма д не зарыв-ся на сабмит, а делаем функцию
 formAddNewCat.addEventListener('submit', handleFormAddNewCat);//isEdit = undefined
 formEditCat.addEventListener('submit', (event) => handleFormAddNewCat (event, true)); //isEdit = true
+
+function onclickToEdit(card, id) {
+    console.log({ card, id })//проверяем,что врно приходят данные
+    popupEditCat.setContent(card, id);
+    const isEdit = true;
+    popupEditCat.open(card);
+}
 
 // ---------------------------API--вывод котов--------------------------------------------------------------
 //api возвращает промис,обраб-ли ч.з then в json в api.js
