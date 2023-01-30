@@ -1,0 +1,17 @@
+.btn {
+    cursor: pointer;
+     /*делаем выравнивание содержимого кнопки по центру по высоте и по ширине*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    
+    padding: 6px 10px;
+  
+    font-size: 18px;
+    gap: 10px;
+    border: none;
+    background-color: var(--bg-secondary-color);
+    color: var(--text-light-color);
+  }
+  

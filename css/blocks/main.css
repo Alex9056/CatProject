@@ -1,0 +1,9 @@
+/*part after header and befor footer*/
+/*flex-способ-ть эл-та растяг-ся или сжим-ся для заполнения собой дотупн простр-ва,
+при этом у body здан 100% вьюпорт(это header+main+footer) и flex-direction -column.
+тогда при flex=1 для main, main занимает все свободное простр-во м-жду footer and header*/
+.main {
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

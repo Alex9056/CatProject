@@ -1,0 +1,12 @@
+.socials {
+    display: flex;
+    align-items: center;
+    /*расстояние м-ду элементами*/
+    gap: 10px;
+  }
+  
+  .socials__link {
+    color: var(--bg-secondary-color);
+    font-size: 25px;
+  }
+  

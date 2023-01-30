@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ad3c368c83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Cats project</title>
+</head>
+<body class="page">
+ <!--header-->
+ <header class="header">
+    <div class="container header__container">
+        <a href="#" class="logo"><i class="fa-solid fa-paw fa-2x"></i> Милые котики</a>
+        <button class="btn" id="add"><i class="fa-solid fa-plus"></i></button>
+    </div>
+</header>
+  <!--main-->
+ <main class="main container">
+    <section class="cards">
+        <!-- <div class="card" id="tmp-card"> 
+            <img src="./assets/images/image1.jpg" class="card__image" alt="Image" />
+            <a href="#" class="card__link">
+              <h3 class="card__name">Tom</h3>
+            </a>
+            <button class="card__like" aria-label="Поставить лайк"><i class="fa-solid fa-heart fa-2x"></i></button>
+        </div> -->
+    </section>
+    
+ </main>
+  <!--footer-->
+ <footer class="footer">
+    <div class="container footer__container">
+        <span class="copyright">©2023 Made by Aleksandra Filimonova</span>
+
+        <div class="socials">
+          <!--  -->
+            <a class="socials__link" href="#"><i class="fa-brands fa-github socials__icon"></i></a>
+            <a class="socials__link" href="#"><i class="fa-brands fa-vk socials__icon"></i></a>
+            <a class="socials__link" href="#"><i class="fa-brands fa-telegram socials__icon"></i></a>
+        </div>
+    </div>
+ </footer>
+<!-- всплывающее окно, попап, кладем не в мэйн, т.к. вырван из потока -->
+ <div class="popup popup-add-cats">
+    <div class="popup__container" >
+        <button class="popup__close btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <h2>Добавить питомца</h2>
+        <!-- форма добавления данных о коте -->
+        <form class="form" id="popup-form-cat">
+            <div class="form__image"></div>
+            <input type="number" class="form__input" name="id" min="1" required placeholder="id">
+            <input type="number" class="form__input" name="age" placeholder="Возраст">
+            <input type="text" class="form__input" name="name" required placeholder="Имя">
+            <input type="number" class="form__input" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
+            <textarea name="description" class="form__input form__textarea" placeholder="Описание"></textarea>
+            <label class="form__checkbox-wrap">
+                <input type="checkbox" name="favorite" class="form__checkbox " placeholder="">
+                <span class="form__label">Любимчик</span>  
+                <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
+            </label>
+            <input type="url" class="form__input form__input_image" name="image" placeholder="Ссылка на фото">
+            <button type="submit" class="form__btn btn">Добавить котика</button>
+        </form>
+    </div>
+</div>
+<div class="popup popup-edit-cats">
+    <div class="popup__container" >
+        <button class="popup__close btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <h2>Добавить питомца</h2>
+        <!-- форма добавления данных о коте -->
+        <form class="form" id="popup-form-edit">
+            <div class="form__image"></div>
+            <input type="number" class="form__input" name="id" min="1" required placeholder="id">
+            <input type="number" class="form__input" name="age" placeholder="Возраст">
+            <input type="text" class="form__input" name="name" required placeholder="Имя">
+            <input type="number" class="form__input" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
+            <textarea name="description" class="form__input form__textarea" placeholder="Описание"></textarea>
+            <label class="form__checkbox-wrap">
+                <input type="checkbox" name="favorite" class="form__checkbox " placeholder="">
+                <span class="form__label">Любимчик</span>  
+                <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
+            </label>
+            <input type="url" class="form__input form__input_image" name="image" placeholder="Ссылка на фото">
+            <button type="submit" class="form__btn btn">Добавить котика</button>
+        </form>
+    </div>
+</div>
+
+</body>
+<!--шаблон для карточек с котами-->
+<template id="card-template">
+    <div class="card"> 
+        <img src="./assets/images/image1.jpg" class="card__image" alt="Image" />
+        <a href="#" class="card__link">
+          <h3 class="card__name">Tom</h3>
+        </a>
+        <button class="card__delete" id="card-delete" aria-label="Удалить"><i class="fa-solid fa-trash-can"></i></button>
+        <button class="card__like" aria-label="Поставить лайк"><i class="fa-solid fa-heart fa-2x"></i></button>
+    </div>
+</template>
+<!-- Подключеник скриптов вручную - важен порядок подключения скриптов. index.js в конце  -->
+<script src='./scripts/api.js'></script>
+<script src='./scripts/cats.js'></script>
+<script src='./scripts/utils.js'></script>
+<script src='./scripts/card.js'></script>
+<script src='./scripts/popup.js'></script>
+<script src='./scripts/index.js'></script> 
+
+</html>
